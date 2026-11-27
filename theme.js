@@ -2,6 +2,7 @@
   const storageKey = "mc1ntosh-theme";
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
   let preference;
+  let themeSwitch;
   try {
     const savedTheme = window.localStorage.getItem(storageKey);
     if (savedTheme === "light" || savedTheme === "dark") preference = savedTheme;
@@ -12,27 +13,23 @@
   function applyTheme() {
     const currentTheme = preference ?? (systemTheme.matches ? "dark" : "light");
     document.documentElement.dataset.theme = currentTheme;
-    for (const button of document.querySelectorAll(".theme-switch button")) {
-      button.setAttribute("aria-pressed", String(button.dataset.mode === currentTheme));
-    }
+    themeSwitch?.setAttribute("aria-checked", String(currentTheme === "dark"));
   }
 
   applyTheme();
   systemTheme.addEventListener("change", applyTheme);
   document.addEventListener("DOMContentLoaded", () => {
-    const themeSwitch = document.querySelector(".theme-switch");
+    themeSwitch = document.querySelector(".theme-switch");
     if (!themeSwitch) return;
-    for (const button of themeSwitch.querySelectorAll("button")) {
-      button.addEventListener("click", () => {
-        preference = button.dataset.mode;
-        applyTheme();
-        try {
-          window.localStorage.setItem(storageKey, preference);
-        } catch {
-          // The current page already reflects the selected theme.
-        }
-      });
-    }
+    themeSwitch.addEventListener("click", () => {
+      preference = themeSwitch.getAttribute("aria-checked") === "true" ? "light" : "dark";
+      applyTheme();
+      try {
+        window.localStorage.setItem(storageKey, preference);
+      } catch {
+        // The current page already reflects the selected theme.
+      }
+    });
     applyTheme();
     themeSwitch.hidden = false;
   });

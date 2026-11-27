@@ -6,8 +6,8 @@
   <meta name="description" content="Duncan’s developer portfolio. Browse projects, including RobloTracker, and learn how they’re built.">
   <link rel="canonical" href="https://mc1ntoshprojects.github.io/">
   <link rel="icon" href="assets/profile.webp" type="image/webp">
-  <script src="theme.js?v=portfolio"></script>
-  <link rel="stylesheet" href="site.css?v=portfolio">
+  <script src="theme.js?v=profile-refresh"></script>
+  <link rel="stylesheet" href="site.css?v=profile-refresh">
   <title>Duncan | Developer portfolio</title>
 </head>
 <body>
@@ -19,63 +19,56 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
       </nav>
-      <div class="theme-switch" role="group" aria-label="Color theme" hidden>
-        <button type="button" data-mode="light" aria-pressed="false"><span aria-hidden="true">☼</span> Light</button>
-        <button type="button" data-mode="dark" aria-pressed="false"><span aria-hidden="true">☾</span> Dark</button>
-      </div>
+      <button class="theme-switch" type="button" role="switch" aria-label="Dark mode" aria-checked="false" hidden>
+        <span class="theme-track" aria-hidden="true">
+          <span class="theme-thumb"><span class="theme-sun">☼</span><span class="theme-moon">☾</span></span>
+        </span>
+      </button>
     </div>
   </header>
-  <div class="wrap layout">
-    <aside class="profile" aria-label="Developer profile">
-      <img class="avatar" src="assets/profile.webp" width="88" height="88" alt="Duncan’s Discord avatar">
-      <p class="profile-name">Duncan</p>
-      <p class="username">@mc1ntoshprojects</p>
-      <div class="profile-links">
-        <a href="https://github.com/mc1ntoshprojects">GitHub</a>
-        <a href="https://www.instagram.com/duncanmc1ntosh/"><span class="instagram-icon" aria-hidden="true"></span> Instagram</a>
+  <main class="wrap layout" id="main" tabindex="-1">
+    <section class="profile" aria-labelledby="intro-title">
+      <img class="avatar" src="assets/profile.webp" width="112" height="112" alt="Duncan’s Discord avatar">
+      <div class="profile-copy">
+        <h1 id="intro-title">Duncan</h1>
+        <div class="profile-links">
+          <a class="username" href="https://www.instagram.com/duncanmc1ntosh/"><span class="instagram-icon" aria-hidden="true"></span> @duncanmc1ntosh</a>
+          <a href="https://github.com/mc1ntoshprojects">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <p>I’m a mid-tier developer. I build Discord bots, websites, and tools, mostly using Codex and Antigravity.</p>
       </div>
-    </aside>
-    <main id="main">
-      <section class="intro" aria-labelledby="intro-title">
-        <h1 id="intro-title">Hey, I’m Duncan.</h1>
-        <p>I am a mid-tier developer that mostly codes my projects using Codex and Antigravity. I build Discord bots, websites, and tools.</p>
-        <a class="button" href="#projects">Browse projects</a>
-      </section>
+    </section>
 
-      <section class="projects" id="projects" aria-labelledby="projects-title">
-        <header class="section-head"><h2 id="projects-title">Projects</h2></header>
-        <article class="project featured" aria-labelledby="rt-title">
-          <div class="project-art" aria-hidden="true">
-            <img src="assets/rt-wallpaper.webp" alt="" width="2048" height="768">
-            <img class="project-logo" src="assets/rt-logo.webp" alt="" width="80" height="80">
-          </div>
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <header class="section-head"><h2 id="projects-title">Projects</h2></header>
+      <div class="project-list">
+        <article class="project" aria-labelledby="rt-title">
+          <img class="project-icon" src="assets/rt-logo.webp" alt="" width="48" height="48">
           <div class="project-copy">
-            <p class="project-type">Discord bot</p>
             <h3 id="rt-title">RobloTracker</h3>
-            <p>Get Discord alerts for changes in public Roblox activity. Choose what to follow, manage pings, and look back at saved alerts.</p>
-            <div class="project-links">
-              <a href="https://roblotracker.github.io/">Project site</a>
-              <a href="https://roblotracker.github.io/install/">Add to Discord</a>
-            </div>
+            <p>Discord alerts for public Roblox activity, with alert history and configurable pings.</p>
+          </div>
+          <div class="project-links">
+            <a href="https://roblotracker.github.io/" aria-label="RobloTracker website">Website <span aria-hidden="true">↗</span></a>
+            <a href="https://roblotracker.github.io/install/">Add to Discord <span aria-hidden="true">↗</span></a>
           </div>
         </article>
-        <article class="project project-row" aria-labelledby="portfolio-title">
-          <div>
-            <p class="project-type">Web development</p>
-            <h3 id="portfolio-title">This portfolio</h3>
-            <p>A static GitHub Pages site built with HTML, CSS, and JavaScript.</p>
+        <article class="project" aria-labelledby="portfolio-title">
+          <span class="project-icon portfolio-icon" aria-hidden="true">&lt;/&gt;</span>
+          <div class="project-copy">
+            <h3 id="portfolio-title">Developer portfolio</h3>
+            <p>This site, built with HTML, CSS, and JavaScript and hosted on GitHub Pages.</p>
           </div>
-          <a href="https://github.com/mc1ntoshprojects/mc1ntoshprojects.github.io">View source</a>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section class="about" id="about" aria-labelledby="about-title">
-        <header class="section-head"><h2 id="about-title">About me</h2></header>
-        <p>I like making tools for the communities I spend time in. I usually start with something I wish were easier, build a first version, and improve it as people use it.</p>
-        <p>With my projects I get to work on both sides of things, from designing a page or a Discord command to figuring out why an alert arrived late. I use Codex and Antigravity while I build, debug, and try out ideas.</p>
-      </section>
-    </main>
-  </div>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <header class="section-head"><h2 id="about-title">About me</h2></header>
+      <p>I like making tools for the communities I spend time in. I usually start with something I wish were easier, build a first version, and improve it as people use it.</p>
+      <p>I enjoy the work behind the scenes as much as the design, whether that means simplifying a Discord command or figuring out why an alert arrived late.</p>
+    </section>
+  </main>
   <footer class="wrap footer">
     <p>© 2026 Duncan</p>
     <a href="#main">Back to top</a>
