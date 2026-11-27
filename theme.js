@@ -19,17 +19,6 @@
   applyTheme();
   systemTheme.addEventListener("change", applyTheme);
   document.addEventListener("DOMContentLoaded", () => {
-    const bio = document.querySelector(".bio");
-    if (bio) {
-      const openBio = () => { bio.open = true; };
-      const openLinkedBio = () => {
-        if (window.location.hash === "#about") openBio();
-      };
-      document.querySelector('.main-nav a[href="#about"]')?.addEventListener("click", openBio);
-      window.addEventListener("hashchange", openLinkedBio);
-      openLinkedBio();
-    }
-
     themeSwitch = document.querySelector(".theme-switch");
     if (!themeSwitch) return;
     themeSwitch.addEventListener("click", () => {
