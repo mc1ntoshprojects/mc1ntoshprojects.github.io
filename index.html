@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://mc1ntoshprojects.github.io/">
   <link rel="icon" href="assets/profile.webp" type="image/webp">
   <script src="theme.js?v=profile-details"></script>
-  <link rel="stylesheet" href="site.css?v=duncan-profile">
+  <link rel="stylesheet" href="site.css?v=profile-editorial">
   <title>Duncan McIntosh | Projects</title>
 </head>
 <body>
@@ -16,8 +16,8 @@
     <div class="wrap top">
       <a class="wordmark" href="./">mc1ntoshprojects</a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
       </nav>
       <button class="theme-switch" type="button" role="switch" aria-label="Dark mode" aria-checked="false" hidden>
         <span class="theme-track" aria-hidden="true"></span>
@@ -30,12 +30,20 @@
       <div class="profile-copy">
         <h1 id="intro-title">Duncan McIntosh</h1>
         <div class="profile-links">
-          <a class="username" href="https://www.instagram.com/duncanmc1ntosh/"><span class="instagram-icon" aria-hidden="true"></span> @duncanmc1ntosh</a>
-          <a href="https://www.roblox.com/users/4887944180/profile"><span class="roblox-icon" aria-hidden="true"></span> Roblox</a>
-          <a href="https://github.com/mc1ntoshprojects">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.instagram.com/duncanmc1ntosh/"><span class="brand-icon instagram-icon" aria-hidden="true"></span> @duncanmc1ntosh</a>
+          <a href="https://www.roblox.com/users/4887944180/profile"><span class="brand-icon roblox-icon" aria-hidden="true"></span> Roblox</a>
+          <a href="https://github.com/mc1ntoshprojects"><span class="brand-icon github-icon" aria-hidden="true"></span> GitHub</a>
         </div>
       </div>
     </section>
+
+    <details class="bio" id="about" open>
+      <summary>About me</summary>
+      <div class="bio-copy">
+        <p>I’m a Finnish developer. I build Discord bots, websites, and tools, mostly using Codex and Antigravity.</p>
+        <p>I like making tools easier to use, from the interface to the code behind it.</p>
+      </div>
+    </details>
 
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <header class="section-head"><h2 id="projects-title">Projects</h2></header>
@@ -51,14 +59,6 @@
         </div>
       </article>
     </section>
-
-    <details class="bio">
-      <summary>About me</summary>
-      <div class="bio-copy" id="about">
-        <p>I’m a Finnish developer. I build Discord bots, websites, and tools, mostly using Codex and Antigravity.</p>
-        <p>Most of my projects start with something I wish were easier in the communities I’m part of. With RobloTracker, that means making Discord alerts easier to manage and figuring out why an alert arrived late.</p>
-      </div>
-    </details>
   </main>
   <footer class="wrap footer">
     <p>© 2026 Duncan McIntosh</p>
