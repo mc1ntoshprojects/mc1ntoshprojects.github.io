@@ -6,9 +6,9 @@
   <meta name="description" content="Duncan’s developer portfolio. Browse projects, including RobloTracker, and learn how they’re built.">
   <link rel="canonical" href="https://mc1ntoshprojects.github.io/">
   <link rel="icon" href="assets/profile.webp" type="image/webp">
-  <script src="theme.js?v=profile-refresh"></script>
-  <link rel="stylesheet" href="site.css?v=profile-refresh">
-  <title>Duncan | Developer portfolio</title>
+  <script src="theme.js?v=profile-details"></script>
+  <link rel="stylesheet" href="site.css?v=profile-details">
+  <title>Duncan | Projects</title>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -20,9 +20,7 @@
         <a href="#about">About</a>
       </nav>
       <button class="theme-switch" type="button" role="switch" aria-label="Dark mode" aria-checked="false" hidden>
-        <span class="theme-track" aria-hidden="true">
-          <span class="theme-thumb"><span class="theme-sun">☼</span><span class="theme-moon">☾</span></span>
-        </span>
+        <span class="theme-track" aria-hidden="true"></span>
       </button>
     </div>
   </header>
@@ -35,38 +33,31 @@
           <a class="username" href="https://www.instagram.com/duncanmc1ntosh/"><span class="instagram-icon" aria-hidden="true"></span> @duncanmc1ntosh</a>
           <a href="https://github.com/mc1ntoshprojects">GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <p>I’m a mid-tier developer. I build Discord bots, websites, and tools, mostly using Codex and Antigravity.</p>
       </div>
     </section>
+
+    <details class="bio">
+      <summary>About me</summary>
+      <div class="bio-copy" id="about">
+        <p>I’m a mid-tier developer. I build Discord bots, websites, and tools, mostly using Codex and Antigravity.</p>
+        <p>I like building for the communities I’m part of. I usually start with something I wish were easier and improve it as people use it.</p>
+        <p>I enjoy the work behind the scenes as much as the design, whether that means simplifying a Discord command or figuring out why an alert arrived late.</p>
+      </div>
+    </details>
 
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <header class="section-head"><h2 id="projects-title">Projects</h2></header>
-      <div class="project-list">
-        <article class="project" aria-labelledby="rt-title">
-          <img class="project-icon" src="assets/rt-logo.webp" alt="" width="48" height="48">
-          <div class="project-copy">
-            <h3 id="rt-title">RobloTracker</h3>
-            <p>Discord alerts for public Roblox activity, with alert history and configurable pings.</p>
-          </div>
-          <div class="project-links">
-            <a href="https://roblotracker.github.io/" aria-label="RobloTracker website">Website <span aria-hidden="true">↗</span></a>
-            <a href="https://roblotracker.github.io/install/">Add to Discord <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="project" aria-labelledby="portfolio-title">
-          <span class="project-icon portfolio-icon" aria-hidden="true">&lt;/&gt;</span>
-          <div class="project-copy">
-            <h3 id="portfolio-title">Developer portfolio</h3>
-            <p>This site, built with HTML, CSS, and JavaScript and hosted on GitHub Pages.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about" aria-labelledby="about-title">
-      <header class="section-head"><h2 id="about-title">About me</h2></header>
-      <p>I like making tools for the communities I spend time in. I usually start with something I wish were easier, build a first version, and improve it as people use it.</p>
-      <p>I enjoy the work behind the scenes as much as the design, whether that means simplifying a Discord command or figuring out why an alert arrived late.</p>
+      <article class="project" aria-labelledby="rt-title">
+        <img class="project-icon" src="assets/rt-logo.webp" alt="" width="48" height="48">
+        <div class="project-copy">
+          <h3 id="rt-title">RobloTracker</h3>
+          <p>Discord alerts for public Roblox activity, with alert history and configurable pings.</p>
+        </div>
+        <div class="project-links">
+          <a href="https://roblotracker.github.io/" aria-label="RobloTracker website">Website <span aria-hidden="true">↗</span></a>
+          <a href="https://roblotracker.github.io/install/">Add to Discord <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </section>
   </main>
   <footer class="wrap footer">
